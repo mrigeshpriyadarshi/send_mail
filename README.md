@@ -6,18 +6,28 @@ This is a ruby library. It can be used to generate mails from the SMTP server wi
 
 Prerequisites
 ------------------
-Install these via your platform's preferred method (apt, yum, ports, emerge, etc.):
+- Install these via your platform's preferred method (apt, yum, ports, emerge, etc.):
 
-	git
-	ruby 2.0.0 or later
-	rubygems
-	bundler
+		git
+		ruby 2.0.0 or later
+		rubygems
+		bundler
 
-Connectivity to SMTP server.
+- Connectivity to SMTP server.
+
+Methods
+-----------
+- viaNetSmtp()
+
+  -  It sends mail with "Net::SMTP" module after compressing the attachment file.
+
+- viaMailSmtp()
+
+  -  It sends mail with "mail" module without compressing the attachment file.
 
 Usage
 ---------
-Folowing are the variables needed by SendMail.
+Following are the variables which needs to be set and passed to methods.
 
 	from = "test@test.com"
 	to = "mpriyada@brocade.com"
@@ -27,14 +37,13 @@ Folowing are the variables needed by SendMail.
 	body = "Howdy!"
 	attachement_file = "/Users/mpriyada/myWorks/ap.txt"
 
+Then, methods can be called as:-
 
-viaNetSmtp(smtp_host, smtp_port, from, to, subject, body, attachement_file)
+- SendMail.viaNetSmtp(smtp_host, smtp_port, from, to, subject, body, attachement_file)
 
--  It sends mail with "Net::SMTP" module after compressing the attachment file.
+or
 
-viaMailSmtp(smtp_host, smtp_port, from, to, subject, body, attachement_file)
-
--  It sends mail with "mail" module without compressing the attachment file.
+- SendMail.viaMailSmtp(smtp_host, smtp_port, from, to, subject, body, attachement_file)
 
 
 License
