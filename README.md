@@ -39,4 +39,4 @@ viaMailSmtp(smtp_host, smtp_port, from, to, subject, body, attachement_file)
 
 License
 -----------
-SendMail is released under the APACHE 2.0 license. See ../LICENSE for more information.
+SendMail is released under the APACHE 2.0 license. See LICENSE for more information.
