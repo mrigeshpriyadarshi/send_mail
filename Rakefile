@@ -1,4 +1,4 @@
-require "./sendmail"
+require "./send_mail.rb"
 
 from = "test@test.com"
 to = "mpriyada@brocade.com"
